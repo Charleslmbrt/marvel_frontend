@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import axios from "axios";
-import "./App.scss";
+import "./assets/scss/App.scss";
 
 //imports de mes composants
 import Header from "./components/Header";

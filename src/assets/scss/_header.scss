@@ -1,5 +1,64 @@
+$black-color :#202020;
+$grey-color: #3a3a3a;
+
 header {
-    width:100%;
-    background-color: black;
-    height:2rem;
+    background-color: $black-color;
+
+.main-header{
+    border-bottom: 1px solid #3a3a3a;
 }
+ 
+.container-header {
+margin: 0 auto;
+max-width:128rem;
+display: flex;
+justify-content: center;
+align-items: center;
+height:5rem;
+
+
+
+.logo img {
+          height:5rem;
+          
+  }
+  
+   .connexion {
+     display: flex;
+   }
+
+}
+
+.main-menu {
+    border-bottom: 1px solid #3a3a3a;
+
+    .container-menu {
+    max-width:128rem;
+    margin: 0 auto;
+      height:4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+        ul {
+            display: flex;
+    
+            li {
+                color:white;
+                margin:0 2rem;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+    
+    
+  
+}
+

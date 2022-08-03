@@ -1,0 +1,50 @@
+$black-color :#202020;
+$grey-color: #3a3a3a;
+$greylight-color: #606060;
+
+
+.main-characters {
+    display: flex;
+    justify-content: center;
+}
+
+
+.container-characters {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .header-characters {
+ margin: 0 auto;
+    }
+
+    .title {
+        margin:4rem 0;
+        font-size: 5rem;
+        color:$greylight-color;
+        font-weight:900;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+    }
+}
+
+.content-characters {
+    display: flex;
+width:100vw;
+
+ justify-content: center;
+    overflow: hidden;
+    overflow-x: scroll;
+    
+    .card-character {     
+        margin:0 1rem;
+        background-color: black;
+        border-radius: 5rem 0rem 0rem 0rem;
+       
+    }
+
+    .card-picture-character {
+        width:40rem;
+    }
+}
+

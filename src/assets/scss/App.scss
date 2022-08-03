@@ -1,0 +1,11 @@
+// Imports scss
+@use "./header";
+@use "./characters";
+
+
+//Import Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;800;900&family=Poppins:ital,wght@0,400;0,700;1,200&display=swap');
+
+body {
+    background-color: #202020;
+}
