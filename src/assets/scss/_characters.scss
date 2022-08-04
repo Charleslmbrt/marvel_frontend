@@ -4,26 +4,72 @@
 .main-characters {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+   
 }
 
+.slider-characters {
+    width:100%;
+    background-color: black;
+    overflow: hidden;
+    z-index:-1;
+    height:40rem;
+
+    img {
+        opacity: 0.1;
+    }
+}
 
 .container-characters {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    max-width:128rem;
+    
+    margin: 0 auto;
+    margin-top:-35rem;
 
     .header-characters {
- margin: 0 auto;
+    margin: 0 auto;
+ 
     }
 
     .title {
-        margin:4rem 0;
-        font-size: 5rem;
-        color:colors.$greylight-color;
-        font-weight:900;
-        text-transform: uppercase;
-        letter-spacing: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1{
+            margin:0rem 0 1rem 0;
+            font-size: 5rem;
+            color:rgb(192, 192, 192);
+            font-weight:700;
+            text-transform: uppercase;
+            letter-spacing: 1rem;
+        }
+
+        p{
+          color:rgb(192, 192, 192);  
+          font-size: 1.2rem;
+          margin:0rem 0 3rem 0;
+          letter-spacing: 0.3rem;
+          max-width:60rem;
+          text-align: center;
+        }
+      
        
+    }
+
+    .search-characters {
+        input {
+        width:100%;
+        margin-bottom:2rem;
+        border: none;
+        padding:1.5rem;
+        background-color: rgb(51, 51, 51);
+        outline: none;
+        color: white;
+        }
     }
 }
 
@@ -36,19 +82,16 @@
     
     .card-character {     
         margin:3rem 1rem 0rem 1rem;
-        background-color: white;
+        background-color: colors.$black-color;
         height:45rem;
+        max-width:30rem;
+        cursor: pointer;
+        position: relative;
+        top: 0;
+        transition: top ease 0.5s;        
 
-
-        .content-card-picture-character img {
-            width:100%;
-            height:100%;
-        border: 2px yellowgreen solid;
-        }
         
        .card-picture-character  {
-        border: 2px blue solid;
-        object-fit: cover;
         overflow: hidden;
         width:30rem;
         height:20rem;
@@ -58,29 +101,46 @@
        .divider {
         display: block;
         height:0.5rem;
-        background-color: red;
+        background-color: #e62429;
         width: 100%;
-        border: 1px red solid;
        }
 
        .card-infos-character {
-        padding:2rem;
+        padding:3rem;
+        height:21rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+   
+        
 
         .card-name-character {
-            color:colors.$greylight-color;
-            font-size: 1.8rem;
-    
+            color:rgb(192, 192, 192);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+ 
         }
 
         .card-description-character {
-            font-size: 1rem;
-            color:colors.$greylight-color;
-            border: 1px red solid;
-            width:30rem;
-           
+            font-size: 1.1rem;
+            line-height: 2rem;
+            color:rgb(192, 192, 192);
+            margin-top:2rem;
+
+          
         }
        }
     }
     
+}
+
+
+.card-character:hover {
+    background-color: #e62429;   
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    top: -1rem;
 }
 

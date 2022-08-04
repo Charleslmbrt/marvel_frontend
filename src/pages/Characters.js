@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import bgMarvel from "../assets/img/bg-marvel.jpeg";
+import notFoundMarvel from "../assets/img/notfound-marevel.jpg";
 
 const Characters = () => {
   const [dataCharacters, setDataCharacters] = useState(null);
@@ -25,10 +27,17 @@ const Characters = () => {
     <p>Loading</p>
   ) : (
     <div className="main-characters">
+      <div className="slider-characters">
+        <img src={bgMarvel} alt="" />
+      </div>
       <div className="container-characters">
         <div className="header-characters">
           <div className="title">
-            <p>Characters</p>
+            <h1>Characters</h1>
+            <p>
+              Get hooked on a hearty helping of heroes and villains from the
+              humble House of Marvel!
+            </p>
           </div>
           <div className="search-characters">
             <input
@@ -43,15 +52,19 @@ const Characters = () => {
         </div>
         <div className="content-characters">
           {dataCharacters.map((character, index) => {
-            console.log({ character });
+            const pictureCharacter = `${character.thumbnail.path}.${character.thumbnail.extension}`;
             return (
               <div key={index} className="card-character">
                 <div className="card-picture-character">
                   <div className="content-card-picture-character">
-                    <img
-                      src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-                      alt=""
-                    />
+                    {pictureCharacter.includes("image_not_available") ? (
+                      <img src={notFoundMarvel} alt=""></img>
+                    ) : (
+                      <img
+                        src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                        alt=""
+                      />
+                    )}
                   </div>
                 </div>
                 <did className="divider"></did>
