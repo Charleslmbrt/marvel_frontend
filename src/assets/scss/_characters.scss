@@ -1,6 +1,4 @@
-$black-color :#202020;
-$grey-color: #3a3a3a;
-$greylight-color: #606060;
+@use "./colors";
 
 
 .main-characters {
@@ -21,30 +19,68 @@ $greylight-color: #606060;
     .title {
         margin:4rem 0;
         font-size: 5rem;
-        color:$greylight-color;
+        color:colors.$greylight-color;
         font-weight:900;
         text-transform: uppercase;
         letter-spacing: 1rem;
+       
     }
 }
 
 .content-characters {
     display: flex;
-width:100vw;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 
- justify-content: center;
-    overflow: hidden;
-    overflow-x: scroll;
+
     
     .card-character {     
-        margin:0 1rem;
-        background-color: black;
-        border-radius: 5rem 0rem 0rem 0rem;
-       
-    }
+        margin:3rem 1rem 0rem 1rem;
+        background-color: white;
+        height:45rem;
 
-    .card-picture-character {
-        width:40rem;
+
+        .content-card-picture-character img {
+            width:100%;
+            height:100%;
+        border: 2px yellowgreen solid;
+        }
+        
+       .card-picture-character  {
+        border: 2px blue solid;
+        object-fit: cover;
+        overflow: hidden;
+        width:30rem;
+        height:20rem;
+
+       }
+
+       .divider {
+        display: block;
+        height:0.5rem;
+        background-color: red;
+        width: 100%;
+        border: 1px red solid;
+       }
+
+       .card-infos-character {
+        padding:2rem;
+
+        .card-name-character {
+            color:colors.$greylight-color;
+            font-size: 1.8rem;
+    
+        }
+
+        .card-description-character {
+            font-size: 1rem;
+            color:colors.$greylight-color;
+            border: 1px red solid;
+            width:30rem;
+           
+        }
+       }
     }
+    
 }
 
