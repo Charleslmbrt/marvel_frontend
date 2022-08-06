@@ -1,14 +1,14 @@
 @use "./colors";
 
 
-.main-characters {
+.main-comics {
     display: flex;
     justify-content: center;
     flex-direction: column;
    
 }
 
-.slider-characters {
+.slider-comics {
     width:100%;
     background-color: black;
     overflow: hidden;
@@ -20,19 +20,16 @@
     }
 }
 
-.container-characters {
+.container-comics {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    max-width:128rem; 
+    max-width:128rem;  
     margin: 0 auto;
     margin-top:-35rem;
 
-    .header-characters {
+    .header-comics {
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
  
     }
 
@@ -62,7 +59,7 @@
        
     }
 
-    .search-characters {
+    .search-comics {
         input {
         width:56rem;
         margin-bottom:2rem;
@@ -75,28 +72,28 @@
     }
 }
 
-.content-characters {
+.content-comics {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 
 
     
-    .card-character {     
-        margin:3rem 1rem 0rem 1rem;
-        background-color: colors.$black-color;
-        height:45rem;
-        max-width:30rem;
+    .card-comic {     
+        margin:3rem 0.4rem 0rem 1rem;
+        // background-color: colors.$black-color;
+        // height:45rem;
+        max-width:25rem;
         cursor: pointer;
         position: relative;
         top: 0;
-        transition: top ease 0.5s;        
+        transition: top ease 0.5s;      
 
         
-       .card-picture-character  {
-        overflow: hidden;
-        width:30rem;
-        height:20rem;
+       .card-picture-comic  {
+      
+        // width:30rem;
+        // height:20rem;
 
        }
 
@@ -107,23 +104,24 @@
         width: 100%;
        }
 
-       .card-infos-character {
-        padding:3rem;
-        height:21rem;
+       .card-infos-comic {
+        padding:1.3rem;
         overflow: hidden;
         text-overflow: ellipsis;
    
         
 
-        .card-name-character {
-            color:rgb(192, 192, 192);
-            font-size: 1.5rem;
+        .card-name-comic {
+            color:colors.$black-color;
+            font-size: 0.8rem;
             font-weight: bold;
-            text-transform: uppercase;
+            text-align: center;
+
+           
  
         }
 
-        .card-description-character {
+        .card-description-comic {
             font-size: 1.1rem;
             line-height: 2rem;
             color:rgb(192, 192, 192);
@@ -137,8 +135,7 @@
 }
 
 
-.card-character:hover {
-    background-color: #e62429;   
+.card-comic:hover {  
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;

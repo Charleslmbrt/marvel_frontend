@@ -1,0 +1,51 @@
+.pagination {
+    margin:0 0 10rem 0;
+}
+
+.navigationButtons {
+    width: 80%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 40px;
+
+    a {
+        padding: 10px;
+        margin: 8px;
+        border-radius: 5px;
+        border: 1px solid red;
+        color: red;
+        cursor: pointer;
+      }
+      
+    a:hover {
+        color: white;
+        background-color: red;
+      }
+
+  }
+  
+
+  
+  .navigationActive a {
+    color: white;
+    background-color: red;
+  }
+  
+  .navigationDisabled a {
+    color: grey;
+    background-color: rgb(206, 206, 206);
+    border: 1px solid grey;
+    cursor: not-allowed;
+
+
+    &:hover {
+        color: grey;
+        background-color: rgb(206, 206, 206);
+        border: 1px solid grey;
+        cursor: not-allowed;
+    }
+ 
+  }

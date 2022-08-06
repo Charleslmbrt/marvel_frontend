@@ -3,6 +3,9 @@ $grey-color: #3a3a3a;
 
 header {
     background-color: $black-color;
+    position: sticky;
+    top:0;
+    z-index: 5;
 
 .main-header{
     border-bottom: 1px solid #3a3a3a;
