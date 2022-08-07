@@ -4,7 +4,8 @@
 @use "./comics";
 @use "./colors";
 @use "./pagination";
-
+@use "./character";
+@use "./loader";
 
 //Import Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;800;900&family=Poppins:ital,wght@0,400;0,700;1,200&display=swap');

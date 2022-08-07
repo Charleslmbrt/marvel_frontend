@@ -1,5 +1,7 @@
+import Characters from "../pages/Characters";
+
 const Home = () => {
-  return <p>Homme</p>;
+  return <Characters />;
 };
 
 export default Home;

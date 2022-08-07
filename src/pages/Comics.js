@@ -4,6 +4,9 @@ import axios from "axios";
 import notFoundMarvel from "../assets/img/notfound-marevel.jpg";
 import bgMarvel from "../assets/img/bg-marvel.jpeg";
 
+//import components
+import Loader from "../components/Loader";
+
 const Comics = () => {
   const [dataComics, setDataComics] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -12,7 +15,6 @@ const Comics = () => {
 
   const comicsPerPage = 12;
   const numberOfComicsVisited = page * comicsPerPage;
-
   const totalPages = Math.ceil(dataComics?.length / comicsPerPage);
 
   const changePage = ({ selected }) => {
@@ -36,7 +38,7 @@ const Comics = () => {
   }, [search]);
 
   return isLoading ? (
-    <p>Loading</p>
+    <Loader />
   ) : (
     <div className="main-comics">
       <div className="slider-comics">

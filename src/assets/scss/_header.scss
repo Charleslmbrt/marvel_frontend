@@ -1,8 +1,7 @@
-$black-color :#202020;
-$grey-color: #3a3a3a;
+@use "./colors";
 
 header {
-    background-color: $black-color;
+    background-color: colors.$black-color;
     position: sticky;
     top:0;
     z-index: 5;
@@ -22,8 +21,7 @@ height:5rem;
 
 
 .logo img {
-          height:5rem;
-          
+     height:5rem;         
   }
   
    .connexion {
@@ -36,8 +34,8 @@ height:5rem;
     border-bottom: 1px solid #3a3a3a;
 
     .container-menu {
-    max-width:128rem;
-    margin: 0 auto;
+      max-width:128rem;
+      margin: 0 auto;
       height:4rem;
       display: flex;
       justify-content: center;
@@ -46,14 +44,32 @@ height:5rem;
 
         ul {
             display: flex;
+         
     
-            li {
-                color:white;
+            .button-menu {
+                color:colors.$greylight-color;
                 margin:0 2rem;
                 font-size: 1.2rem;
                 text-transform: uppercase;
                 cursor: pointer;
+                font-weight: bold;
+                letter-spacing: 0.2rem;
+
+                &:hover{
+                    color:white;
+                    -webkit-transition: all 0.2s linear;
+                    -moz-transition: all 0.2s linear;
+                    -o-transition: all 0.2s linear;
+                    transition: all 0.2s linear;
+                }
+
             }
+            .button-menu:focus {
+                color:white;
+            }
+
+         
+            
         }
     }
 }

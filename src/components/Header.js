@@ -9,9 +9,11 @@ const Header = () => {
           {/* <div className="search">
             <input type="text" spaceholder="Recherche"></input>
           </div> */}
-          <div className="logo">
-            <img src={marvelLogo} alt="Logo Marvel" />
-          </div>
+          <Link to="/">
+            <div className="logo">
+              <img src={marvelLogo} alt="Logo Marvel" />
+            </div>
+          </Link>
           {/* <div className="connexion">
             <div className="sign-in">
               <button>Sign in</button>
@@ -27,15 +29,13 @@ const Header = () => {
         <div className="container-menu">
           <ul>
             <Link to="/characters">
-              <li>Characters</li>
+              <li className="button-menu">Characters</li>
             </Link>
             <Link to="/comics">
-              <li>Comics</li>
+              <li className="button-menu">Comics</li>
             </Link>
-            <Link to="favorites">
-              {" "}
-              <li>Favorites</li>
-            </Link>
+
+            <li className="button-menu button-favorites">Favorites</li>
           </ul>
         </div>
       </div>

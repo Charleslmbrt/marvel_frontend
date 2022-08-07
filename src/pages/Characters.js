@@ -5,6 +5,9 @@ import bgMarvel from "../assets/img/bg-marvel.jpeg";
 import notFoundMarvel from "../assets/img/notfound-marevel.jpg";
 import ReactPaginate from "react-paginate";
 
+//import components
+import Loader from "../components/Loader";
+
 const Characters = () => {
   const [dataCharacters, setDataCharacters] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -36,7 +39,7 @@ const Characters = () => {
   }, [search]);
 
   return isLoading ? (
-    <p>Loading</p>
+    <Loader />
   ) : (
     <div className="main-characters">
       <div className="slider-characters">
